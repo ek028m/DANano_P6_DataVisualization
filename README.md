@@ -1,8 +1,7 @@
-a README.md file that includes four sections...
 Summary - 
 This data visualization displays the survival rates of passengers on board the titanic based on their social class, gender, age, and size of their family on board the ship.  
-Please investigate how the varying factors contribute to the chances of surviving the tragic ship wreck on April 15, 1912. The Class chart demonstrates how the upper class had the highest number of survivors within it, the Sex chart demonstrates how females stood a far better chance of surviving (Hollywood got this one right), the Age chart shows a direct correlation in terms of the youth of the ship having an increased chance of surviving - inversely related to the elderly age bracket, and the Family Size chart breaks down how large families, those of 7+ family members of board, had no chances of surviving the titanic tradegy.
 
+Please investigate how the varying factors contribute to the chances of surviving the tragic ship wreck on April 15, 1912. The Class chart demonstrates how the upper class had the highest number of survivors within it, the Sex chart demonstrates how females stood a far better chance of surviving (Hollywood got this one right), the Age chart shows a direct correlation in terms of the youth of the ship having an increased chance of surviving - inversely related to the elderly age bracket, and the Family Size chart breaks down how large families, those of 7+ family members of board, had no chances of surviving the titanic tradegy.
 
 Design - 
 I decided to focus my data visualizations on factors having the greatest impacts to determining odds of surviving the titanic accident. 
