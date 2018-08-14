@@ -1,9 +1,11 @@
-Summary - 
+# A Data Visualization Project of the Titanic Passenger Dataset
+
+## Summary - 
 This data visualization displays the survival rates of passengers on board the titanic based on their social class, gender, age, and size of their family on board the ship.  
 
 Please investigate how the varying factors contribute to the chances of surviving the tragic ship wreck on April 15, 1912. The Class chart demonstrates how the upper class had the highest number of survivors within it, the Sex chart demonstrates how females stood a far better chance of surviving (Hollywood got this one right), the Age chart shows a direct correlation in terms of the youth of the ship having an increased chance of surviving - inversely related to the elderly age bracket, and the Family Size chart breaks down how large families, those of 7+ family members of board, had no chances of surviving the titanic tradegy.
 
-Design - 
+## Design - 
 I decided to focus my data visualizations on factors having the greatest impacts to determining odds of surviving the titanic accident. 
 - For "Number of Survived and Deceased Passengers by Class" chart, I found demonstrating the actual volume of passengers per class would be a powerful visual representation of the split of passenger attendance on the ship. With this in mind, I chose to use green and red color visual encodings to denote the Survived / Deceased status for each passenger.
 - For "Survival Rate by Sex" chart, I went with a bar chart. It's simple, it gets the point accross for how much a person's gender played a role in their survival rate. Chivalry was huge back then!
@@ -17,7 +19,7 @@ Changes from the initial data visualization report to the final include:
 - Titles and legends to all the charts
 - Findings after each chart summarizing main data insight
 
-Feedback - 
+## Feedback - 
 	1. A good variety of visual representations for the varying factors contributing to survival rate.  However, I would recommend adding legends and titles to each graph.  It would be easier to follow along the story.
 	2. The biggest takeaway is how females had a .70 survival rate vs males having a .20 survival rate
 	3. Consider changing the survival rate from a decimal to a percentage
@@ -25,10 +27,10 @@ Feedback -
 	5. Assuming the class values correlate to 1, 2, 3 to upper, middle, lower - the class chart show that although the upper class had the highest survived in each class.  Highly recommend adding a legend to this chart.
 	6. Part of the first graph is cut off.  Need to update margins. 
 
-Resources - list any sources you consulted to create your visualization
-https://www.kaggle.com/c/titanic
-http://dimplejs.org/examples_viewer.html?id=bars_vertical_stacked
-https://www.w3schools.com/cssref/css_colors.asp
-https://github.com/PMSI-AlignAlytics/dimple/wiki/dimple.chart
-https://www.w3schools.com/html/html_paragraphs.asp
-Udacity's Dimple.js unit 5 in the Data Visualization lesson series.
+## Resources - list any sources you consulted to create your visualization
+- https://www.kaggle.com/c/titanic
+- http://dimplejs.org/examples_viewer.html?id=bars_vertical_stacked
+- https://www.w3schools.com/cssref/css_colors.asp
+- https://github.com/PMSI-AlignAlytics/dimple/wiki/dimple.chart
+- https://www.w3schools.com/html/html_paragraphs.asp
+- Udacity's Dimple.js unit 5 in the Data Visualization lesson series.
