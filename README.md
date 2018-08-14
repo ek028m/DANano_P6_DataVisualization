@@ -20,12 +20,12 @@ Changes from the initial data visualization report to the final include:
 - Findings after each chart summarizing main data insight
 
 ## Feedback - 
-	1. A good variety of visual representations for the varying factors contributing to survival rate.  However, I would recommend adding legends and titles to each graph.  It would be easier to follow along the story.
-	2. The biggest takeaway is how females had a .70 survival rate vs males having a .20 survival rate
-	3. Consider changing the survival rate from a decimal to a percentage
-	4. Imagine you are seeing this data for the first time.  Guide your reader through the story and really captivate us!  In addition to adding plot titles and legends, I would add descriptions to introduce / conclude each visualization.  Any insightful commentary would be helpful to walking the reader through your visualizations.
-	5. Assuming the class values correlate to 1, 2, 3 to upper, middle, lower - the class chart show that although the upper class had the highest survived in each class.  Highly recommend adding a legend to this chart.
-	6. Part of the first graph is cut off.  Need to update margins. 
+1. A good variety of visual representations for the varying factors contributing to survival rate.  However, I would recommend adding legends and titles to each graph.  It would be easier to follow along the story.
+2. The biggest takeaway is how females had a .70 survival rate vs males having a .20 survival rate
+3. Consider changing the survival rate from a decimal to a percentage
+4. Imagine you are seeing this data for the first time.  Guide your reader through the story and really captivate us!  In addition to adding plot titles and legends, I would add descriptions to introduce / conclude each visualization.  Any insightful commentary would be helpful to walking the reader through your visualizations.
+5. Assuming the class values correlate to 1, 2, 3 to upper, middle, lower - the class chart show that although the upper class had the highest survived in each class.  Highly recommend adding a legend to this chart.
+6. Part of the first graph is cut off.  Need to update margins. 
 
 ## Resources - list any sources you consulted to create your visualization
 - https://www.kaggle.com/c/titanic
