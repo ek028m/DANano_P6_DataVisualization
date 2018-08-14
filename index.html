@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="http://dimplejs.org/dist/dimple.v2.0.0.min.js"></script>
+    
+    <style>
+
+      h2 {
+        text-align: center;
+      }
+
+      circle.dimple-all{
+        fill:red; /*This is used for filling in the red dots on the line graph for Age chart*/
+      }
+    
+    </style>
+
+  </head>
+
+<body>
+
+  <script type="text/javascript">
+    // Add title to the web page
+    d3.select("body")
+      .append("h2")
+      .text("A Look At Those Who Survived The Titanic")
+  </script>
+
+<!--Add Introduction Summary of the data visualization graphics-->
+  <div align="center">
+    <p>
+      This data visualization displays the survival rates of passengers on board the titanic based on their social class, gender, age, and size of their family on board the ship.  Please investigate how the varying factors contribute to the chances of surviving the tragic ship wreck on April 15, 1912. The Class chart demonstrates how the upper class had the highest number of survivors within it, the Sex chart demonstrates how females stood a far better chance of surviving (Hollywood got this one right), the Age chart shows a direct correlation in terms of the youth of the ship having an increased chance of surviving - inversely related to the elderly age bracket, and the Family Size chart breaks down how large families, those of 7+ family members of board, had no chances of surviving the titanic tradegy.
+
+    </p>
+  </div>
+
+<!--Create the tags for the graphics and add summaries of what the graphic represents below each plot-->
+  <div align="center">
+    <div id="plot1"></div>
+    <p>
+      The upper class had the most passengers (136) survive the titanic. 
+      The lower class had by far the majority of the passenger load and a high of 372 passengers deceased.
+    </p>
+  </div>
+
+  <div align="center">
+    <div id="plot2"></div>
+    <p>
+      Females had a much higher chance of survival over males - about 3 times are more likely to survive.
+    </p>
+  </div>
+
+  <div align="center">
+    <div id="plot3"></div>
+    <p>
+      Those passengers in the age group of 0-15 had the best chance of surviving, 0.6, as compared to a 0.2 chance with the elderly age group of 60+.
+    </p>
+  </div>
+
+  <div align="center">
+    <div id="plot4"></div>
+    <p>
+      Larger family group sizes experienced lower chances of survival. Those with a family size of 10 had a zero chance of survival. On the other size of the spectrum, family sizes of 3 had the best chance of survival at a rate of 0.7.
+    </p>
+  </div>
+
+  <script type="text/javascript">
+    // Create svg images for each of the plots 
+    var svg1 = dimple.newSvg("#plot1",1200, 400);
+    var svg2 = dimple.newSvg("#plot2",1200, 400);
+    var svg3 = dimple.newSvg("#plot3",1200, 400);
+    var svg4 = dimple.newSvg("#plot4",1200, 400);
+  </script>
+
+  <script type="text/javascript">
+
+    // Use data accessor function to load the data into the svg
+    d3.csv("data/Survived_pclass.csv", function(data){
+      var chart = new dimple.chart(svg1, data);
+      chart.addCategoryAxis("x", ["Class"]);
+      chart.addMeasureAxis("y", "Number of Passengers");
+      chart.addSeries(["Status"], dimple.plot.bar);    
+      chart.assignColor("Survived", "#90EE90");
+      chart.assignColor("Deceased", "#FFA07A")   
+      // Provide styling to the plot
+      svg1.append("text")
+          .style("text-anchor", "middle")
+          .style("font-weight", "bold")
+          .text("Number of Survived and Deceased Passengers by Class")
+          .attr("x", chart._xPixels() + 490) 
+          .attr("y", chart._yPixels() - 25); 
+      chart.addLegend(575, 28, 515, 20, "right");
+      chart.draw();
+    });
+    
+    d3.csv("data/Survived_sex.csv", function(data){
+      var chart2 = new dimple.chart(svg2, data);
+      chart2.addCategoryAxis("x", ["Sex"]);
+      chart2.addMeasureAxis("y", "Survival Rate");
+      chart2.addSeries(["Sex"], dimple.plot.bar);    
+      svg2.append("text")
+          .style("text-anchor", "middle")
+          .style("font-weight", "bold")
+          .text("Survival Rate by Sex")
+          .attr("x", chart2._xPixels() + 490) 
+          .attr("y", chart2._yPixels() - 25); ;  
+      chart2.addLegend(575, 28, 515, 20, "right");   
+      chart2.draw();
+    });
+
+    d3.csv("data/Survived_age.csv", function(data){
+      var chart3 = new dimple.chart(svg3, data);
+      x = chart3.addCategoryAxis("x", "Age Range");
+      x.addOrderRule([ "0-15", "15-30", "30-45", "45-60", "60+"]);
+      chart3.addMeasureAxis("y", "Survival Rate");
+      chart3.addSeries(null, dimple.plot.scatter);
+      chart3.addSeries(null, dimple.plot.line);  
+      svg3.append("text")
+          .style("text-anchor", "middle")
+          .style("font-weight", "bold")
+          .text("Survival Rate by Age")
+          .attr("x", chart3._xPixels() + 490) 
+          .attr("y", chart3._yPixels() - 25); ;    
+      chart3.draw();
+    });
+
+    d3.csv("data/Survived_familysize.csv", function(data){
+      var chart4 = new dimple.chart(svg4, data);
+      chart4.addCategoryAxis("x", ["Family Size"]);
+      chart4.addMeasureAxis("y", "Survival Rate");
+      chart4.addSeries(null, dimple.plot.bar); 
+      svg4.append("text")
+          .style("text-anchor", "middle")
+          .style("font-weight", "bold")
+          .text("Survival Rate by Family Size")
+          .attr("x", chart4._xPixels() +490) 
+          .attr("y", chart4._yPixels() - 25); ;   
+      chart4.draw();
+    });
+
+  </script>
+</body>
+</html>
