@@ -19,7 +19,7 @@ Changes from the initial data visualization report to the final include:
 - Titles and legends to all the charts
 - Findings after each chart summarizing main data insight
 
-## Feedback - 
+## Peer Review Feedback - 
 1. A good variety of visual representations for the varying factors contributing to survival rate.  However, I would recommend adding legends and titles to each graph.  It would be easier to follow along the story.
 2. The biggest takeaway is how females had a .70 survival rate vs males having a .20 survival rate
 3. Consider changing the survival rate from a decimal to a percentage
